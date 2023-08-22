@@ -7,12 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title')</title>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    
+
     <link rel="shortcut icon" href="{{ URL::to('/img') }}/favicon.ico" type="image/x-icon">
 
     <!-- Global stylesheets -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
-        type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
     <link href="{{ URL::to('/admin') }}/assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
     <link href="{{ URL::to('/admin') }}/assets/css/icons/fontawesome/styles.min.css" rel="stylesheet" type="text/css">
     <link href="{{ URL::to('/admin') }}/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
@@ -40,10 +39,8 @@
     <script type="text/javascript" src="{{ URL::to('/admin') }}/assets/js/plugins/ui/moment/moment.min.js"></script>
     <script type="text/javascript" src="{{ URL::to('/admin') }}/assets/js/plugins/ui/headroom/headroom.min.js">
     </script>
-    <script type="text/javascript"
-        src="{{ URL::to('/admin') }}/assets/js/plugins/ui/headroom/headroom_jquery.min.js"></script>
-    <script type="text/javascript"
-        src="{{ URL::to('/admin') }}/assets/js/plugins/tables/datatables/datatables.min.js"></script>
+    <script type="text/javascript" src="{{ URL::to('/admin') }}/assets/js/plugins/ui/headroom/headroom_jquery.min.js"></script>
+    <script type="text/javascript" src="{{ URL::to('/admin') }}/assets/js/plugins/tables/datatables/datatables.min.js"></script>
     <script type="text/javascript" src="{{ URL::to('/admin') }}/assets/js/plugins/forms/selects/select2.min.js">
     </script>
     <script type="text/javascript" src="{{ URL::to('/admin') }}/assets/js/plugins/forms/styling/uniform.min.js">
@@ -55,8 +52,7 @@
     <script type="text/javascript" src="{{ URL::to('/admin') }}/assets/js/core/app.js"></script>
     <script type="text/javascript" src="{{ URL::to('/admin') }}/assets/js/pages/datatables_basic.js"></script>
     <script type="text/javascript" src="{{ URL::to('/admin') }}/assets/js/pages/form_layouts.js"></script>
-    <script type="text/javascript"
-        src="{{ URL::to('/admin') }}/assets/js/pages/datatables_extension_fixed_header.js"></script>
+    <script type="text/javascript" src="{{ URL::to('/admin') }}/assets/js/pages/datatables_extension_fixed_header.js"></script>
     <script type="text/javascript" src="{{ URL::to('/admin') }}/assets/js/plugins/pickers/daterangepicker.js">
     </script>
     <script type="text/javascript" src="{{ URL::to('/admin') }}/assets/js/pages/dashboard.js"></script>
@@ -119,8 +115,7 @@
                     @yield('content')
 
                     <!-- Footer -->
-                    <div class="footer text-muted">&copy; 2015. <a href="#">Limitless Web App Kit</a> by <a
-                            href="http://themeforest.net/user/Kopyov" target="_blank">Eugene Kopyov</a>
+                    <div class="footer text-muted">&copy; 2022. <a href="#">Copy right</a> by <a href="http://themeforest.net/user/Kopyov" target="_blank">Arfiyan Wahyu Pratama</a>
                     </div>
                     <!-- /footer -->
 
