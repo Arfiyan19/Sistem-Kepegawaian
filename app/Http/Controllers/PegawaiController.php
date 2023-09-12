@@ -79,6 +79,7 @@ class PegawaiController extends Controller
     public function store(Request $request)
     {
         //
+        // return dd($request->password);
 
         $this->validate($request, [
             'id_role' => 'required',
@@ -97,14 +98,15 @@ class PegawaiController extends Controller
             'id_jabatan' => 'required',
             'id_divisi' => 'required',
             'tgl_masuk' => 'required',
-            'imgupload' => 'required|mimes:jpeg,png,jpg,gif,svg|file|max:5000'
+            'imgupload' => 'required|mimes:jpeg,png,jpg,gif,svg|file|max:5000',
+            'password' => 'required',
         ]);
 
         $extension = $request->file('imgupload')->extension();
         $imgname = $request->nik . '_' . date('dmyHi') . '.' . $extension;
         $path = Storage::putFileAs('public/images', $request->file('imgupload'), $imgname);
         $id = IdGenerator::generate(['table' => 'pegawai', 'length' => 8, 'prefix' => date('ym')]);
-        $password = bcrypt("$request->nik");
+        $password = bcrypt("$request->password");
         $riwayat_jabatan = Riwayat_jabatan::where('id_pegawai', $id)
             ->where('id_jabatan', $request->id_jabatan)
             ->count();
@@ -164,7 +166,7 @@ class PegawaiController extends Controller
         //Asign Potongan
         $potongan = $request->potongan;
         $user->potongan()->attach($potongan);
-
+        // return dd($user);
         Alert::success('success', ' Berhasil Input Data !');
         return redirect('pegawai');
     }

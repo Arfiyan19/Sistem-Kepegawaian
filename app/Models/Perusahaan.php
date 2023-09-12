@@ -20,5 +20,8 @@ class Perusahaan extends Model
         'path_logo',
         'email_private',
         'password',
+        //nama_web
+        'nama_website',
+        'footer_website'
     ];
 }

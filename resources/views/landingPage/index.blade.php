@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sistem Kepegawaian</title>
+    <?php
+    $perusahaan = \App\Models\Perusahaan::first();
+    ?>
+    <title>{{ $perusahaan->nama_website }}</title>
+
     <link rel="shortcut icon" href="{{ URL::to('/img') }}/favicon.ico" type="image/x-icon">
     <!-- Bootstrap , fonts & icons  -->
     <link rel="stylesheet" href="{{ URL::to('/landing') }}/css/bootstrap.css">
@@ -35,7 +39,10 @@
                     <div class="brand-logo d-inline-block">
                         <a href="#">
                             <!-- light version logo (logo must be black)-->
-                            <img src="{{ URL::to('/admin') }}/assets/images/logo_sipegawai.png" alt="">
+                            <h4 style="font-family: initial;color: white;">
+                                <b> {{ $perusahaan->nama_website }}</b>
+                            </h4>
+                            <!-- <img src="{{ URL::to('/admin') }}/assets/images/logo_sipegawai.png" alt=""> -->
                             <!-- Dark version logo (logo must be White)-->
                         </a>
                     </div>
@@ -43,6 +50,9 @@
                         <button class="d-block d-lg-none offcanvas-btn-close" type="button" data-toggle="collapse" data-target="#mobile-menu" aria-controls="mobile-menu" aria-expanded="true" aria-label="Toggle navigation">
                             <i class="gr-cross-icon"></i>
                         </button>
+                        <h5 class="d-block d-lg-none offcanvas-header mt-5 mb-2" style="font-family: initial;">{{$perusahaan->nama_website }}</h5>
+                        <a class="d-block d-lg-none offcanvas" href="/login" style="font-family: initial;color: white;font-size: 15px;">
+                            Login </a>
                     </div>
                     <div class="header-btns ml-auto pr-2 ml-lg-9 d-none d-xs-flex">
                         <a class="btn btn-2 btn-turquoise border border-turquoise font-size-5 text-firefly" href="/login">
@@ -96,7 +106,7 @@
                                 <!-- DO NOT DELETE THIS CREDIT. TO DELETE, PLEASE BUY PRO LICENSE -->
                                 <div class="copyright">
                                     <p class="font-size-1 font-family-5 text-periwinkle-gray line-height-1p5 mb-0 font-family-inter">
-                                        &copy; Sistem Informasi Kepegawaian 2022. </p>
+                                        &copy; {{ $perusahaan->nama_website}} 2023. </p>
                                 </div>
                                 <!-- copyright end-->
                                 <!-- footer-menu start-->
@@ -106,7 +116,7 @@
                                         <!-- main-menu start-->
                                         <ul class="mb-0 list-unstyled d-flex flex-row justify-content-center">
                                             <li class="mx-0">
-                                                <a class="text-periwinkle-gray font-size-1 font-weight-normal font-family-inter" href="#features">Copy Right @Arfiyan wahyu pratama</a>
+                                                <a class="text-periwinkle-gray font-size-1 font-weight-normal font-family-inter" href="#features">Copy Right 2023 @ {{$perusahaan->footer_website}}</a>
                                             </li>
                                         </ul>
                                         <!-- main-menu end-->

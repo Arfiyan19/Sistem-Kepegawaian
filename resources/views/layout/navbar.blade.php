@@ -1,7 +1,13 @@
-<?php $user = Auth::user(); ?>
+<?php $user = Auth::user();
+?>
 <div class="navbar-header">
-    <a class="navbar-brand" href="index.html"><img src="{{ URL::to('/admin') }}/assets/images/logo_sipegawai.png"
-            alt=""></a>
+    <a class="navbar-brand" href="index.html">
+        <?php
+        $perusahaan = \App\Models\Perusahaan::first();
+        ?>
+        <b>{{$perusahaan->nama_website}} </b>
+        <!-- <img src="{{ URL::to('/admin') }}/assets/images/logo_sipegawai.png" alt=""> -->
+    </a>
 
     <ul class="nav navbar-nav visible-xs-block">
         <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>

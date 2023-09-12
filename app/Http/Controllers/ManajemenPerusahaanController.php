@@ -54,7 +54,9 @@ class ManajemenPerusahaanController extends Controller
             'email_public' => 'required',
             'email_private' => 'required',
             'password' => 'required',
-            'path_logo' => 'required|mimes:jpeg,png,jpg,gif,svg|file|max:5000'
+            'path_logo' => 'required|mimes:jpeg,png,jpg,gif,svg|file|max:5000',
+            'nama_website' => 'required',
+            'footer_website' => 'required',
         ]);
 
         $extension = $request->file('path_logo')->extension();
@@ -81,6 +83,8 @@ class ManajemenPerusahaanController extends Controller
             'email_private' => $request->email_private,
             'password' => bcrypt($request->password),
             'path_logo' => $imgname,
+            'nama_website' => $request->nama_website,
+            'footer_website' => $request->footer_website,
         ]);
 
 
@@ -144,6 +148,8 @@ class ManajemenPerusahaanController extends Controller
                 $perusahaan->kota = $request->kota;
                 $perusahaan->no_telp = $request->no_telp;
                 $perusahaan->path_logo = $imgname;
+                $perusahaan->nama_website = $request->nama_website;
+                $perusahaan->footer_website = $request->footer_website;
                 $perusahaan->update();
             } else {
                 $perusahaan->nama = $request->nama;
@@ -154,6 +160,8 @@ class ManajemenPerusahaanController extends Controller
                 $perusahaan->no_telp = $request->no_telp;
                 $perusahaan->password = bcrypt($request->password);
                 $perusahaan->path_logo = $imgname;
+                $perusahaan->nama_website = $request->nama_website;
+                $perusahaan->footer_website = $request->footer_website;
                 $perusahaan->update();
 
                 $file = DotenvEditor::setKeys([
@@ -180,6 +188,8 @@ class ManajemenPerusahaanController extends Controller
                 $perusahaan->email_public = $request->email_public;
                 $perusahaan->kota = $request->kota;
                 $perusahaan->no_telp = $request->no_telp;
+                $perusahaan->nama_website = $request->nama_website;
+                $perusahaan->footer_website = $request->footer_website;
                 $perusahaan->update();
             } else {
                 $perusahaan->nama = $request->nama;
@@ -188,6 +198,8 @@ class ManajemenPerusahaanController extends Controller
                 $perusahaan->alamat = $request->alamat;
                 $perusahaan->kota = $request->kota;
                 $perusahaan->no_telp = $request->no_telp;
+                $perusahaan->nama_website = $request->nama_website;
+                $perusahaan->footer_website = $request->footer_website;
                 $perusahaan->password = bcrypt($request->password);
                 $perusahaan->update();
 

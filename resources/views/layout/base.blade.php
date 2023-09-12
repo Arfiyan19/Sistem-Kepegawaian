@@ -113,9 +113,11 @@
                 <!-- Content area -->
                 <div class="content">
                     @yield('content')
-
+                    <?php
+                    $perusahaan = \App\Models\Perusahaan::first();
+                    ?>
                     <!-- Footer -->
-                    <div class="footer text-muted">&copy; 2022. <a href="#">Copy right</a> by <a href="http://themeforest.net/user/Kopyov" target="_blank">Arfiyan Wahyu Pratama</a>
+                    <div class="footer text-muted">&copy; 2023. <a href="#">Copy right</a> by <a href="" target="_blank">{{ $perusahaan->footer_website}}</a>
                     </div>
                     <!-- /footer -->
 
